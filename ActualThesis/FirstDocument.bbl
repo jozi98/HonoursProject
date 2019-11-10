@@ -1,0 +1,466 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+\APACcitebtitle {AI in Radiology at Stanford: Rise of the Machines}}{%
+\APACcitebtitle {AI in Radiology at Stanford: Rise of the Machines}}{%
+{\protect \APACyear {{\protect \bibnodate {}}}}%
+}]{%
+youtube2}
+\APACinsertmetastar {%
+youtube2}%
+\APACrefbtitle {AI in Radiology at Stanford: Rise of the Machines.} {Ai in
+  radiology at stanford: Rise of the machines.}
+\newblock
+\APACrefYearMonthDay{{\protect \bibnodate {}}}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Bradley%
+}{%
+Bradley%
+}{%
+{\protect \APACyear {2008}}%
+}]{%
+bradley2008history}
+\APACinsertmetastar {%
+bradley2008history}%
+\begin{APACrefauthors}%
+Bradley, W\BPBI G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2008}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {History of medical imaging} {History of medical
+  imaging}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Proceedings of the American Philosophical
+  Society}{152}{3}{349--361}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Castellino%
+}{%
+Castellino%
+}{%
+{\protect \APACyear {2005}}%
+}]{%
+castellino2005computer}
+\APACinsertmetastar {%
+castellino2005computer}%
+\begin{APACrefauthors}%
+Castellino, R\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2005}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Computer aided detection (CAD): an overview} {Computer
+  aided detection (cad): an overview}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Cancer Imaging}{5}{1}{17}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Deng%
+\ \protect \BOthers {.}}{%
+Deng%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2009}}%
+}]{%
+deng2009imagenet}
+\APACinsertmetastar {%
+deng2009imagenet}%
+\begin{APACrefauthors}%
+Deng, J.%
+, Dong, W.%
+, Socher, R.%
+, Li, L\BHBI J.%
+, Li, K.%
+\BCBL {}\ \BBA {} Fei-Fei, L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2009}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Imagenet: A large-scale hierarchical image database}
+  {Imagenet: A large-scale hierarchical image database}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {2009 IEEE conference on computer vision and pattern
+  recognition} {2009 ieee conference on computer vision and pattern
+  recognition}\ (\BPGS\ 248--255).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Guendel%
+\ \protect \BOthers {.}}{%
+Guendel%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2019}}%
+}]{%
+guendel2019multi}
+\APACinsertmetastar {%
+guendel2019multi}%
+\begin{APACrefauthors}%
+Guendel, S.%
+, Ghesu, F\BPBI C.%
+, Grbic, S.%
+, Gibson, E.%
+, Georgescu, B.%
+, Maier, A.%
+\BCBL {}\ \BBA {} Comaniciu, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Multi-task Learning for Chest X-ray Abnormality
+  Classification on Noisy Labels} {Multi-task learning for chest x-ray
+  abnormality classification on noisy labels}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:1905.06362}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Hinton%
+, Srivastava%
+, Krizhevsky%
+, Sutskever%
+\BCBL {}\ \BBA {} Salakhutdinov%
+}{%
+Hinton%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2012}}%
+}]{%
+hinton2012improving}
+\APACinsertmetastar {%
+hinton2012improving}%
+\begin{APACrefauthors}%
+Hinton, G\BPBI E.%
+, Srivastava, N.%
+, Krizhevsky, A.%
+, Sutskever, I.%
+\BCBL {}\ \BBA {} Salakhutdinov, R\BPBI R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Improving neural networks by preventing co-adaptation of
+  feature detectors} {Improving neural networks by preventing co-adaptation of
+  feature detectors}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:1207.0580}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Huang%
+, Liu%
+, Van Der~Maaten%
+\BCBL {}\ \BBA {} Weinberger%
+}{%
+Huang%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+huang2017densely}
+\APACinsertmetastar {%
+huang2017densely}%
+\begin{APACrefauthors}%
+Huang, G.%
+, Liu, Z.%
+, Van Der~Maaten, L.%
+\BCBL {}\ \BBA {} Weinberger, K\BPBI Q.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Densely connected convolutional networks} {Densely
+  connected convolutional networks}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Proceedings of the IEEE conference on computer vision
+  and pattern recognition} {Proceedings of the ieee conference on computer
+  vision and pattern recognition}\ (\BPGS\ 4700--4708).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Irvin%
+\ \protect \BOthers {.}}{%
+Irvin%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2019}}%
+}]{%
+irvin2019chexpert}
+\APACinsertmetastar {%
+irvin2019chexpert}%
+\begin{APACrefauthors}%
+Irvin, J.%
+, Rajpurkar, P.%
+, Ko, M.%
+, Yu, Y.%
+, Ciurea-Ilcus, S.%
+, Chute, C.%
+\BDBL {}others%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Chexpert: A large chest radiograph dataset with
+  uncertainty labels and expert comparison} {Chexpert: A large chest radiograph
+  dataset with uncertainty labels and expert comparison}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:1901.07031}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Islam%
+, Aowal%
+, Minhaz%
+\BCBL {}\ \BBA {} Ashraf%
+}{%
+Islam%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+islam2017abnormality}
+\APACinsertmetastar {%
+islam2017abnormality}%
+\begin{APACrefauthors}%
+Islam, M\BPBI T.%
+, Aowal, M\BPBI A.%
+, Minhaz, A\BPBI T.%
+\BCBL {}\ \BBA {} Ashraf, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Abnormality detection and localization in chest x-rays
+  using deep convolutional neural networks} {Abnormality detection and
+  localization in chest x-rays using deep convolutional neural
+  networks}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:1705.09850}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Krizhevsky%
+, Sutskever%
+\BCBL {}\ \BBA {} Hinton%
+}{%
+Krizhevsky%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2012}}%
+}]{%
+krizhevsky2012imagenet}
+\APACinsertmetastar {%
+krizhevsky2012imagenet}%
+\begin{APACrefauthors}%
+Krizhevsky, A.%
+, Sutskever, I.%
+\BCBL {}\ \BBA {} Hinton, G\BPBI E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Imagenet classification with deep convolutional neural
+  networks} {Imagenet classification with deep convolutional neural
+  networks}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Advances in neural information processing systems}
+  {Advances in neural information processing systems}\ (\BPGS\ 1097--1105).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+LeCun%
+\ \protect \BOthers {.}}{%
+LeCun%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {1989}}%
+}]{%
+lecun1989backpropagation}
+\APACinsertmetastar {%
+lecun1989backpropagation}%
+\begin{APACrefauthors}%
+LeCun, Y.%
+, Boser, B.%
+, Denker, J\BPBI S.%
+, Henderson, D.%
+, Howard, R\BPBI E.%
+, Hubbard, W.%
+\BCBL {}\ \BBA {} Jackel, L\BPBI D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1989}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Backpropagation applied to handwritten zip code
+  recognition} {Backpropagation applied to handwritten zip code
+  recognition}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Neural computation}{1}{4}{541--551}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Lowe%
+}{%
+Lowe%
+}{%
+{\protect \APACyear {2004}}%
+}]{%
+lowe2004distinctive}
+\APACinsertmetastar {%
+lowe2004distinctive}%
+\begin{APACrefauthors}%
+Lowe, D\BPBI G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2004}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Distinctive image features from scale-invariant
+  keypoints} {Distinctive image features from scale-invariant
+  keypoints}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{International journal of computer
+  vision}{60}{2}{91--110}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Rajpurkar%
+\ \protect \BOthers {.}}{%
+Rajpurkar%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+rajpurkar2017chexnet}
+\APACinsertmetastar {%
+rajpurkar2017chexnet}%
+\begin{APACrefauthors}%
+Rajpurkar, P.%
+, Irvin, J.%
+, Zhu, K.%
+, Yang, B.%
+, Mehta, H.%
+, Duan, T.%
+\BDBL {}others%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Chexnet: Radiologist-level pneumonia detection on chest
+  x-rays with deep learning} {Chexnet: Radiologist-level pneumonia detection on
+  chest x-rays with deep learning}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:1711.05225}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Rimmer%
+}{%
+Rimmer%
+}{%
+{\protect \APACyear {2017}}%
+}]{%
+rimmer2017radiologist}
+\APACinsertmetastar {%
+rimmer2017radiologist}%
+\begin{APACrefauthors}%
+Rimmer, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Radiologist shortage leaves patient care at risk, warns
+  royal college} {Radiologist shortage leaves patient care at risk, warns royal
+  college}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Bmj}{359}{}{j4683}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Szegedy%
+\ \protect \BOthers {.}}{%
+Szegedy%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2015}}%
+}]{%
+szegedy2015going}
+\APACinsertmetastar {%
+szegedy2015going}%
+\begin{APACrefauthors}%
+Szegedy, C.%
+, Liu, W.%
+, Jia, Y.%
+, Sermanet, P.%
+, Reed, S.%
+, Anguelov, D.%
+\BDBL {}Rabinovich, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Going deeper with convolutions} {Going deeper with
+  convolutions}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Proceedings of the IEEE conference on computer vision
+  and pattern recognition} {Proceedings of the ieee conference on computer
+  vision and pattern recognition}\ (\BPGS\ 1--9).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+\APACcitebtitle {Video from RSNA 2018: Dr. Paul Chang on AI and radiology}}{%
+\APACcitebtitle {Video from RSNA 2018: Dr. Paul Chang on AI and radiology}}{%
+{\protect \APACyear {{\protect \bibnodate {}}}}%
+}]{%
+youtube}
+\APACinsertmetastar {%
+youtube}%
+\APACrefbtitle {Video from RSNA 2018: Dr. Paul Chang on AI and radiology.}
+  {Video from rsna 2018: Dr. paul chang on ai and radiology.}
+\newblock
+\APACrefYearMonthDay{{\protect \bibnodate {}}}{}{}.
+\newblock
+\begin{APACrefURL} \url{https://youtu.be/o2-CrrrtuJI?t=300} \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Wang%
+\ \protect \BOthers {.}}{%
+Wang%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+wang2017chestx}
+\APACinsertmetastar {%
+wang2017chestx}%
+\begin{APACrefauthors}%
+Wang, X.%
+, Peng, Y.%
+, Lu, L.%
+, Lu, Z.%
+, Bagheri, M.%
+\BCBL {}\ \BBA {} Summers, R\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Chestx-ray8: Hospital-scale chest x-ray database and
+  benchmarks on weakly-supervised classification and localization of common
+  thorax diseases} {Chestx-ray8: Hospital-scale chest x-ray database and
+  benchmarks on weakly-supervised classification and localization of common
+  thorax diseases}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Proceedings of the IEEE conference on computer vision
+  and pattern recognition} {Proceedings of the ieee conference on computer
+  vision and pattern recognition}\ (\BPGS\ 2097--2106).
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}

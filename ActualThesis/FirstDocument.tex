@@ -1,0 +1,57 @@
+\documentclass{report}
+
+%\usepackage[usenames,dvipsnames]{color}
+\usepackage[pagebackref=false,pdffitwindow=false]{hyperref}
+\usepackage{apacite}
+\usepackage{graphicx}
+\title{Using Deep Learning to Analyse Medical Images}
+\author{Jehanzeb Mobarik}
+
+\begin{document}
+	
+\maketitle
+
+
+\include{Overview}
+
+\include{TraditionalMethods}
+
+\input{State_of_the_art}
+
+\input{Medical_Images}
+
+\input{Related_Work}
+\input{ReviewOfRelatedWork}
+\input{Summary}
+
+
+
+
+\iffalse
+It was hypothesised that we can use a deep neural network approach to learn visual features directly without manual definitions. Fully connected neural networks can be used to extract features from an image taking in a vector of pixel values . This vector is fed into a network where each hidden layer node is connected to the inputs. However, by doing this we are squashing every pixel into a hidden node losing all spatial information in an image. Since images have rich structure a method needed to be found so that this spatial structure can be preserved. One way we can preserve the structure is to connect patches of the input to a hidden node. Not only does this reduce parameters for the network, it preserves pixels which are in the same region of the image as these pixels are usually related to each other. This is achieved by sliding a filter over a patch of the image and applying a convolution operation. This patch needs to be of the same dimensions as the filter and is applied over the whole image. The filter used for the convolution operation is iteratively learnt so that the correct feature can be extracted. Multiple filters can be learnt to extract different features from an image and this can be achieved by having multiple convolutional layers. Moreover filters in lower conv-layers usually describe simple textures, whereas filter in high-conv layers are more likely to represent object parts.
+\fi
+
+
+\iffalse
+%Medical imaging began when Wilhelm Conrad Roentgen discovered the X-ray.
+X-rays are commonly used for evaluating chest and bone fractures as they can generate images of tissues and structures inside the body. This discovery laid the foundation for more medical imaging techniques such mammographies(used in breast cancer detection) ,CAT(computerized axial tomography) scans and MRI(magnetics resonance imaging).\cite{bradley2008history}.These types of images are diagnosed by specialist radiologists who have spent many years being trained to analyse images.
+
+\subsection{NHS Meltdown}
+ According to the Royal College of Radiologists in the UK , the NHS does not have enough radiologists to meet imaging diagnostic demand leaving patients at risk \cite{rimmer2017radiologist}. 97\% of radiology departments in the UK have cited that they were unable to meet their diagnostic reporting requirements in 2016 the college's 2016 census report found. A particular shortage in Scotland was noticed where the consultant workforce grew by 7\% from 2010 to 2016, but demand for CT and MRI scans increased over 10\%.
+\subsection{Proposed Solution}
+The field of image detection has seen great bounds and leaps over the years. 
+\fi
+\bibliographystyle{apacite}
+\bibliography{References}
+
+	
+
+	 
+\end{document}
+
+	
+	
+	
+
+
+

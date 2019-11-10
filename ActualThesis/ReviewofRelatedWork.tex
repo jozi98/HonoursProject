@@ -1,0 +1,11 @@
+\subsection{Analysis of Related Work}
+
+In light of reviewing the related work, we can see a wide array of methods have been applied to produce several State-of-the-Art results on pathologies such as Pneumonia, Lung Nodules and Cardiomegaly.
+The paper from Stanford ML Group was one of the first to be tested on such a large scale dataset and made a mark in the application of deep learning on X-rays. Results from this paper show a 121-layered network produce results comparable to expert radiologists by using an architecture similar to that of DenseNet with some tweaks. As stated the ChexNet model has a higher F1 score than the average F1 score for four practising radiologists. 
+After the success of ChexNet, more papers were released in the same domain trying to improve on accuracy metrics. The article discussed in section 1.4.2 uses more advanced features to locate the pathology more accurately. Given these additional features, it allows for the model to disregard certain regions of the images hence reducing noise in training process. From the results presented. It shows a clear improvement in accuracy across different pathologies once these features are introduced to the model. 
+Lastly, the paper from X demonstrates a clear difference of performance on know CNN architectures. In section X, it showed that deeper layers led to better performance on the ImageNet classification task. However contrary to most image classification tasks, paper shown in section 1.4.3 shows how even though we see a better accuracy on deeper models, we see a higher AUC score for models like VGG-19 compared to ResNet-101, which has more layers, and this was due to earlier layers being better at detecting smaller objects. We also see the use of an ensemble of models to increase accuracy, which was something that was not experimented with in the previous papers reviewed. As well as this, we see a model trained on Cardiomegaly questioning the current ways of detecting this pathology such that it disregards traditional methods of looking at the relative size of the lung and heart in comparison. 
+Lastly, from the three papers reviewed, we have seen the constant evolution which has allowed for more sophisticated methods of pathology detection and perhaps a combination of techniques in the future can increase detection amongst heart and lung pathologies. 
+
+
+
+

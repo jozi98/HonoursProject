@@ -1,0 +1,43 @@
+\section{State-of-the-Art}
+
+Convolutional Neural Networks are a special kind of Multi-layered Perceptron(MLP). Like almost every other neural network they are trained with a version of back-propagation algorithm. Where they differ is in the architecture. This contrast can be viewed in figure~\ref{fig:MLP} and figure~\ref{fig:CNN}. CNN's are designed to recognise visual patterns directly from pixel values with minimal preprocessing. They can recognise patterns with extreme variability(such as handwritten characters) and with robustness to distortions and simple geometric transformations. \cite{lecun1989backpropagation}
+CNN's differ from MLP's in that they take advantage of spatial information of an image by convolving a patch of the input image with a filter weight of the same dimension. This results in a 2D matrix called a feature map. These filter weights are applied over the whole image and are iteratively refined in the training process , so that the correct features can be extracted. Different weight filter can be used to extract different features. This is achieved by passing the input across multiple convolution layers. In order to visualise this please refer to figure ~\ref{fig:CNN}. From the diagrams it can be appreciated that MLP's lose all spatial information about an image by flattening every pixel and connecting these pixel values to a neuron in the hidden layer. As well as this we can see that MLP's have many more parameters in the network compared to CNN which can lead to over-fitting especially if the number of training samples is limited. \cite{szegedy2015going}
+Starting with LeNet-5 , CNNS's have typically had a standard stacked structured of convolutional layers, followed by ReLU operation, max-pooling and then a fully connected layer. There are variants of this basic design in different image classification tasks and they have all yielded respective results on classification tasks such as MNIST and CIFAR. Although, the most notable includes the ImageNet classification challenge where 1.2 million images were classified into 1000 different classes. In the past years CNN architectures have dominated this challenge and the first publication using CNN architecture was produced by Alex Krizhevsky and Geoffery Hinton in 2012\cite{krizhevsky2012imagenet}. The architecture was given the name Alex-Net and achieved a top-5 error rate of 15.3\% outperforming the previous state-of-the-art, SIFT \cite{lowe2004distinctive} which achieved a 26.2\% error rate using traditional methods. Since then, new CNN architectures have been published with improved results and this can be seen in the table below. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{MLP.png}
+	\caption{Architecture for MLP. Shows how all pixels value in image are flattened losing all spatial infromation(\url{https://alexlenail.me/NN-SVG/index.html})}
+	\label{fig:MLP}
+\end{figure}
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{CNN.png}
+	\caption{Architecture for Le-Clun CNN. Shows how spatial information is preserved as well different operations applied (\url{https://alexlenail.me/NN-SVG/LeNet.html})}
+	\label{fig:CNN}
+\end{figure}
+
+\begin{table}[H]
+	\centering
+	\small
+	\begin{tabular}{llll}
+		\toprule 	Model & Top-5 error rate &Number of Layers\\
+		\midrule
+		AlexNet(2012)  & 15.3\%	&  8 layers\\
+		VGG16(2014)&7.3\%  & 19 layers\\
+		GoogleNet(2014)&6.7\% & 50 layers\\
+		InceptionV3(2015)&3.58\%& 50 layers\\
+		ResNet(2015)    &3.57\% &152 layers\\
+		\bottomrule
+	\end{tabular}
+
+
+	\caption{Results of different models with Human error rate at 5.1\%}\label{tab:Results}
+\end{table}
+
+
+
+
+From the table we can see that for large datasets such as ImageNet, there is seems to be a trend developing. That is that the number of layers as well as layer size is increasing. A bigger size means that the model holds more parameters and can make it more prone to over-fitting. To address this problem, a technique developed by Goolge called ``dropout" was developed \cite{hinton2012improving}

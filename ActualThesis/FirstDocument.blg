@@ -1,0 +1,16 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: FirstDocument.aux
+A level-1 auxiliary file: Overview.aux
+A level-1 auxiliary file: TraditionalMethods.aux
+The style file: apacite.bst
+Database file #1: References.bib
+Warning--entry type for "youtube" isn't style-file defined
+--line 76 of file References.bib
+Warning--entry type for "youtube2" isn't style-file defined
+--line 83 of file References.bib
+I was expecting a `,' or a `}'---line 87 of file References.bib
+ :  
+ :  url = {https://youtu.be/Gigd1rkZTSE}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+apacite.bst [2013/07/21 v6.03 APA bibliography style]
+(There was 1 error message)
