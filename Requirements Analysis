@@ -1,0 +1,71 @@
+\setcounter{secnumdepth}{4}
+\chapter{Requirements Analysis}
+
+In order to answer the question proposed in the literature review, a number of objectives must be met. As this project cover two stages: Application of deep learning model on medical images and visualisation, this requirements analysis is split up into two sections: first section relating to requirement analysis of implementation of deep learning model and the second being visualisation. 
+
+These requirements have been gathered on the basis of the MoSCoW rule, which prioritises different requirements by stating the project must ,should or could achieve the detailed requirements by the end of the implementation stage.
+A requirement that the project "must" achieve has the highest priority , where if this requirement is not met, the developed product will not be fit for purpose. The ones that "should" be completed are next in the priority hierarchy, whereby the project will still be functional without them, but their addition to the project would improve the end product. The requirements that "could" be completed are those that are not necessary to the overall functionality. However, these would benefit the project. 
+
+\section{Deep Learning Model}
+
+\subsection{Functional Requirements}
+\subsubsection{Dateset}
+Must pre-process data from dataset as each chest X-ray has a report associated to it within the dataset. A supplied Natural Language Processor (NLP) given from the authors of the dataset will be supplied to get the class label values representing the presence of Pneumonia. 
+
+\subsubsection{Convolutional Neural Network}
+Must build a model using image classification techniques like CNN's,
+
+\subsubsection{Improve Performance of model}
+Must look into ways of tweaking model parameters,and evaluating the results of these improvements ,like the ones described in the literature review. 
+
+\subsubsection{Comparison of different algorithms}
+A report showing comparison of different algorithm employed to build a model and predict could be created depending on the time. 
+
+\subsubsection{Extending classification}
+The models classification could be further extended to diagnose more than one pathology.
+
+\subsection{Non-Functional Requirements}
+\subsubsection{Programming Language and Libraries}
+Must use Python for rapid development and prototyping of CNN model via libraries such as Keras and sci-kit learn for visualisation and explanation of results. 
+
+\subsubsection{Proof of Concept}
+Must be fully functional by the proof of concept stage
+
+\subsubsection{Anonymised Date}
+Must use anonymised data from publicly available datasets to conform to GDPR rule.
+
+\subsubsection{Accuracy}
+Model should diagnose images with an acceptable accuracy rate
+
+\section{Web App for visualisation}
+
+\subsection{Functional Requirements}
+
+\subsubsection{Visualisation}
+If the model evaluation shows promising performance, visualisation and explainability of results must be used:
+
+- Must show a classification probability to the user when a chest X-ray is tested on the deployed model
+
+- Should show a localisation of where the model believes the Pneumonia is present in the X-ray.
+
+
+\subsubsection{User Input}
+User must be allowed to upload an image through the interface and get back the appropriate results. 
+
+\subsection{Non-Functional Requirements}
+
+\subsubsection{Programming Language and Libraries}
+Must use Javascript,HTML,CSS and cloud services for web application development:
+
+- Should use Amazon Web Services(AWS) Sage Machine and AWS Lambda to deploy trained and tested model.   The model should be accessed via the deployed RESTful API
+
+\subsubsection{Completion Date}
+Must be completed by the project demonstration day or could be operational by proof of concept deadline 
+
+\subsubsection{Compatibility}
+Should be compatible with all major web browsers
+
+\subsubsection{Image quality}
+
+Must not reduce image quality when passing image to cloud service where model has been deployed upon
+
