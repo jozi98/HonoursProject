@@ -1,0 +1,158 @@
+
+\chapter{Experiment \& Results}
+
+
+In this chapter, the experiments that were performed during the duration of this project will be discussed. This discussion will include the successful experiments as well as the experiments that failed due to a flaw in the initial setup. For each experiment the general setup will be discussed. This includes the CNN architecture, epochs, batch size, learning rate and training and testing splits. Each of the experiment results will be discussed in detail where the evaluation metrics from \ref{metrics} will be applied to the model results.  
+
+\section{Experiment 1}
+
+
+
+\textbf{Model Architecture:} 
+For the first experiment that was carried a simple CNN architecture was used to classify the images. The setup of the CNN involved the use of two convolutional layers each with ReLU activation. After the final convolutional layer, Max Pooling is applied to reduce the dimensionality of the network. After applying Max Pooling the features extracted are flattened and sent through a fully connected layer consisting of 128 neurons. ReLU activation is applied once more before adding a further 2 neurons and finally a Soft-max layer. Figure \ref{fig:exp1} shows the layers that have been used in Experiment 1
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1,width=1\linewidth]{images/Experiment1_Architecture}
+	\caption{Model Architecture for Experiment 1}
+	\label{fig:exp1}
+\end{figure}
+
+
+
+\textbf{Hyper-parameters}
+
+Hyper-parameter setup for the experiment is the following: 
+
+\begin{itemize}
+
+\item Imbalanced training set(\textit{Non-Shuffled})
+\item Balanced testing set 
+\item Batch Size = 64
+\item Epochs = 1
+\item Adam optimiser (lr=0.01) 
+\item Categorical Cross Entropy Loss Function
+
+
+\end{itemize}
+
+\textbf{Results}
+
+For the initial experiment, the following confusion matrix shows the models performance: 
+
+ \begin{figure}[H]
+	\centering
+	\hspace{-3cm}
+	\includegraphics[scale=0.5]{images/ConfusionMatrix_Exp1}
+	\caption{Experiment 1 Confusion Matrix}
+	\label{fig:exp1_conf}
+
+\end{figure}
+\newpage
+
+After inspecting the results above, it can be observed that the model trained on the above hyper-parameters has an accuracy of 50\%  on the test set shown in the confusion matrix above. From the matrix, it shows the model has a Recall/Specificity score of 1 since the model was able to identify all patients with pneumonia. However, although the model can classify pneumonia cases correctly, the opposite is true for the normal cases as the model classifies them as positive cases, hence giving a Specificity score of 0.
+
+
+Observations were made to understand why the model produced the results in figure \ref{fig:exp1_conf}. Upon reviewing the setup for experiment 1, it was noted that since the training data was not shuffled it meant that for each epoch the model was learning 74\% of the pneumonia cases first and a further 26\% of the normal cases. It meant that the model was learning in a sequential manner which affects the weight updates. It is important that moving forward the training set is shuffled so that batches of input contain a mixture of both positive and negative samples. 
+
+Another observation noted when reviewing results is that the number of epochs was too low. The number of epochs determines the number of passes over the entire training set. It means the number of epochs must be higher so that the model has more chances to learn from the training set.
+
+
+Lastly, in this experiment, it was decided that the testing should be balanced. However, after reflection experiments going forward should not balance out the testing set as this could remove vital images which could include difficult samples and may test the model's capability further. Balancing of the provided data would not reflect the medical environment where it is common to have imbalanced datasets. 
+ 
+ 
+\newpage
+\subsection{Improving Experiment 1} \label{Improving Experiment1}
+
+\textbf{Model Architecture}
+In this experiment, the aim is to see the effect higher epochs and shuffled training data has on the model performance.
+The model architecture is the same as the previous experiment which is illustrated in figure \ref{fig:exp1}. 
+
+\textbf{Hyper-parameters}
+
+\begin{itemize}
+	
+	\item Imbalanced training set(\textit{Shuffled per epoch})
+	\item Validation set(\textit{10\% of training})
+	\item Imbalanced testing set 
+	\item Batch Size = 64
+	\item Epochs = 10
+	\item Adam optimiser (lr=0.01) 
+	\item Categorical Cross Entropy Loss Function
+	
+\end{itemize}
+
+The main differences in hyper-parameters settings include increased epoch to allow the model to have more passes to learn from the training data. The training set has also been shuffled and the testing set has been changed to the unbalanced distribution mentioned in the previous experiment. To track the model performance over the entire training process this experiment used 10\% of the training set to act as a validation set. By doing so we can track the model accuracy and loss over 10 epochs. 
+
+\textbf{Note:} Keras allows us to shuffle the data via the \textit{shuffle} parameter which shuffles the order of the data at every epoch. This allows the model to learn in a varied manner since the sequence of the training data is different per epoch. By using this feature in Keras it means reproducibility is not guaranteed but experiments ran multiple times should show similar results. 
+
+\textbf{Results}
+
+For this experiment, the following confusion matrix shows the model performance after changing hyper-parameters. Since the model has been run for more than one epoch, an accuracy and loss graph can be used to track the model performance on the training and validation set through out the training process.
+
+\begin{figure}[H]
+	\centering
+	\hspace{-1cm}
+	\includegraphics[scale=0.5,width=0.5\linewidth]{images/CMExp_1_1}
+	\caption{Experiment 1.1 Confusion Matrix}
+	\label{fig:exp1.1_conf}
+\end{figure}
+
+
+
+
+\begin{figure}[H]
+	\begin{minipage}[t]{7.2cm}
+		\begin{center}
+			\includegraphics*[width=1\linewidth]{images/444ff3fd-daba-478a-9d6f-8c8062ddb5b2}
+			\caption{Model Accuracy}
+			\label{fig:exp1.1_auc}
+		\end{center}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{7.2cm}
+		\begin{center}
+			\includegraphics*[width=1\linewidth]{images/e6bf7a6f-ab58-4092-ab68-5573f8142896}
+			\caption{Model Loss}
+			\label{fig:exp1.1_loss}
+		\end{center}
+	\end{minipage}
+\end{figure}
+
+
+\textbf{Results Analysis}
+
+
+The confusion matrix in figure \ref{fig:exp1.1_conf} shows that after shuffling the training data and increasing the number of epochs the model achieves a 75\% \textbf{Accuracy} on the test set. \textbf{Recall/Sensitivity} score is 0.99 and the \textbf{Specificity} score is 0.3. From figure \ref{fig:exp1.1_auc} we can track the model accuracy on both the training and testing set. The graph shows us the model is able to quickly learn the training set close to 100\% accuracy between the first and third epoch(Python epoch begins from 0th epoch) and continues to increase which suggests the model could have been trained for longer. Figure \ref{fig:exp1.1_loss} shows a similar story but measures the models loss which shows the training loss drops quickly in the first 2 epochs. The validation line in figure \ref{fig:exp1.1_auc} shows the accuracy increases a lot between the first and second epoch, however, later on in the training process validation accuracy tends to fluctuate before it starts to drop. 
+
+
+Although the model has a reduced Recall/Specificity score, which is expected since the model has learned in a varied manner, the number of false positives has gone down which suggests increased epochs and a shuffled training set improves model performance. However, it still evident that due to the imbalance in the training set the model is classifying almost double the amount of false positives compared to true negatives. To diagnose the issue of why the validation data is suffering from a case of over-fitting the same experiment was ran for four additional runs where the test accuracy ranged from 71\% to 75\%. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{images/ImprovingExp1_Enhanced}
+	\caption{Identical experiments with different outcomes }
+	\label{fig:exp1.1_4models}
+\end{figure}
+
+
+Figure \ref{fig:exp1.1_4models} shows that the same experiment ran multiple times results in a different training process, where even though training accuracy for all five experiments ends in a similar trajectory, the validation accuracy shows a different story as all five validation accuracies are different. On reflection the reason the same model produced different accuracies is due to the value of the learning rate being too high for this dataset. 
+
+
+The learning rate is a hyper-parameter that controls how much to change the model in response to the estimated error each time the model weights are updated. In this specific situation we hypothesis that since the data is shuffled each of the experiments sees a different sequence of data which when coupled with a high learning rate causes drastic changes in weight updates which effects the training and validation accuracy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

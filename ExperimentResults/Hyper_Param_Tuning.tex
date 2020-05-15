@@ -1,0 +1,153 @@
+\section{Hyper-Parameter Tuning}
+
+In this experiment(s) the aim is to apply hyper-parameter tuning to improve performance of the previous experiment and stabilise the training and validation accuracy and loss. There are a range of hyper-parameters to experiment with however, the experiments carried out in this section will focus mainly on adjusting Adam learning rate, increasing epochs, changing the number of convolution operations in the convolutional layers and number of dense connections in the fully connected layers.
+
+\subsection{Learning rate}
+
+It was noted in the experiments carried out in section \ref{Improving Experiment1} that after running the same experiment five times the overall testing accuracy varied as well as the validation accuracy and loss. The aim of this experiment is to reduce the learning rate to see the effect it has on stabilising results. 
+
+\textbf{Model architecture}
+
+The model architecture is the same as before and is illustrated in figure \ref{fig:exp1}
+
+\textbf{Hyper-Parameters}
+
+The model hyper-parameters are largely the same with learning rate changing from 0.01 to 0.0001. 
+
+\textbf{Results}
+
+\begin{figure}[H]
+	\centering
+	\hspace{-1cm}
+	\includegraphics[scale=0.5,width=0.5\linewidth]{images/ConfusionMatrix_Hyper_Param(LR)}
+
+	\caption{Confusion Matrix after adjusting learning rate}
+	\label{fig:exp1.2LR}
+\end{figure}
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1,width=1\linewidth]{images/LearningRate_Auc}
+	\caption{Model accuracy after changing learning rate}
+	\label{fig:exp1.2LRAuc}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1,width=1\linewidth]{images/LearningRate_Loss}
+	\caption{Model loss after changing learning rate}
+	\label{fig:exp1.2LRLoss}
+\end{figure}
+
+In this particular experiment, although we see a decrease in performance, the same model ran five times produces results clustered closer together with testing accuracy across five models being the same except one which differs by one percent. In figure \ref{fig:exp1.2LRAuc} and \ref{fig:exp1.2LRLoss} we see that for the five models ran, all of them show a similar trajectory with both training and validation accuracy closely follow each other. A change in learning rate also appears to reduce the discrepancy between the training and validation accuracy acting as a regularisation effect which stopped over-fitting. The same can be said for the loss graph show in figure \ref{fig:exp1.2LRLoss} which shows the training loss is still lowering with the validation loss starting to flatten out. This suggests that the model could have been trained for longer. 
+
+Comparing figure \ref{fig:exp1.1_4models} and \ref{fig:exp1.2LRAuc}, we can see that the model after tuning the learning rate is stable across multiple runs. As a result of reducing the learning rate, although it stabilised results, the model has smaller weight updates which slows down the process of convergence. 
+
+Therefore, we ran the same experiment with 20 epochs which resulted in test results shown in the confusion matrix in figure \ref{fig:exp_HyperParam_20epochs_CM} and the model accuracy loss shown in figure \ref{fig:exp_HyperParam_20epochs_ModelAccuracy}  and \ref{fig:exp_HyperParam_20epochs_ModelLoss} respectively. 
+
+\begin{figure}[H]
+	\centering
+	\hspace{-1cm}
+	\includegraphics[scale=0.5,width=0.5\linewidth]{images/Hyper-Param_Tuning/ConfusionMatrix}
+	\caption{Results after 20 epochs}
+	\label{fig:exp_HyperParam_20epochs_CM}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{minipage}[t]{7.2cm}
+		\begin{center}
+			\includegraphics*[width=1\linewidth]{images/Hyper-Param_Tuning/Model_Accuracy}
+			\caption{Model Accuracy}
+			\label{fig:exp_HyperParam_20epochs_ModelAccuracy}
+		\end{center}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{7.2cm}
+		\begin{center}
+			\includegraphics*[width=1\linewidth]{images/Hyper-Param_Tuning/Model_Loss}
+			\caption{Model Loss}
+			\label{fig:exp_HyperParam_20epochs_ModelLoss}
+		\end{center}
+	\end{minipage}
+\end{figure}
+
+After running the experiment over 20 epochs, the overall testing \textbf{Accuracy} is 76\% with a \textbf{Recall} and \textbf{Specificity} score of 0.99 and 0.37, respectively. From the model accuracy graph shown in figure \ref{fig:exp_HyperParam_20epochs_ModelAccuracy}, the training process is generally stable when comparing both the training and validation lines, which suggests that a reduced learning rate and increased epoch value has kept stability during training. There are slight deviations after the 9th epoch until the 20th where the training and validation accuracy and loss start to deviate from each other. When comparing the result from the experiment in section \ref{Improving Experiment1}, the results in this experiment after reducing the learning rate and increasing epochs shows a slight increase in \textbf{Accuracy} and \textbf{Specificity}. 
+
+
+
+\subsection{Adding Convolution and Fully Connected Layers}
+
+Previous experiments showed that we were able to stabilise results over many runs and increase specificity. Another approach that we took to further reduce the higher number of false positives, is to alter the convolutional and fully connected layer in the model architecture. Figure \ref{fig:exp1_example} and \ref{fig:IncConvo} shows a comparison of the model architecture between the previous experiments and the one used in this experiment. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1,width=1\linewidth]{images/Experiment1_Architecture}
+	\caption{Model Architecture for previous experiments}
+	\label{fig:exp1_example}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1,width=1\linewidth]{images/Experiment_Architecture}
+	\caption{New Model architecture}
+	\label{fig:IncConvo}
+\end{figure}
+
+
+
+What is noticeable is the addition of a convolution layer and the number filters in each of those layers. These layers are responsible for extracting the relevant features of an image, before passing those features through a fully connected(FC) layer, where the classification process occurs. Previous experiments maintained the same number of filters in the two convolutional layers, whereas in this experiment we doubled the amount of filters after every layer. The intuition behind this choice is that CNN's typically detect lower level features via the filters from the first convolutional layer, such as edges and lines. Once the lower level features are extracted, the second layer typically detects motifs by spotting particular arrangements of edges, regardless of small variations and finally the third layer may assemble motifs into larger combinations that correspond to parts of familiar objects \cite{lecun2015deep}. By increasing the number of filters, a higher number of inputs are passed to the FC layer, and as such, it makes sense to increase the number of neurons in the FC layer which is why an additional layer of 64 neurons is added. 
+
+Moreover, the addition of Max Pooling helps with reducing the dimensionality of the network after every convolutional operation and lastly, a technique know as dropout was also used in this experiment to help combat over-fitting. Previous experiments showed signs of over-fitting towards the end of the training process and so increasing the number of convolutional layers could increase over-fitting and hence drop performance on the test set. Dropout is a regularisation technique where randomly selected neurons are ignored during training, which means that their contribution to the activation of downstream neurons is temporarily stopped during the forward propagation, and subsequently any weight updates during the back-propagation stage are not applied. Figure \ref{fig:Dropout} shows an example of how dropout works.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5,width=1\linewidth]{images/IncConvoLayers/Dropout}
+	\caption{}
+	\label{fig:Dropout}
+\end{figure}
+
+In the paper which introduced the concept of dropout \cite{srivastava2014dropout}, the recommended value for randomly dropping out neurons is 0.5, however for this experiment we will use a value of 0.1 since the FC layer is much smaller in this experiment compared to the original paper and the previous experiments did not show a huge deviation between the training and validation lines.
+
+\textbf{Model Architecture}
+
+As mentioned above the model architecture is shown in figure \ref{fig:IncConvo}. 
+
+\textbf{Hyper-Parameters}
+
+The model hyper-parameters are unchanged from the previous experiment. 
+
+\textbf{Results}
+
+\begin{figure}[H]
+	\centering
+	\hspace{-1cm}
+	\includegraphics[scale=0.5,width=0.5\linewidth]{images/IncConvoLayers/ConfusionMatrix}
+	\caption{Testing results after adjusting architecture}
+	\label{fig:exp_IncConvo}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{minipage}[t]{7.2cm}
+		\begin{center}
+			\includegraphics*[width=1\linewidth]{images/IncConvoLayers/Model_Accuracy}
+			\caption{Model Accuracy}
+			\label{fig:exp_IncConvo_ModelAccuracy}
+		\end{center}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{7.2cm}
+		\begin{center}
+			\includegraphics*[width=1\linewidth]{images/IncConvoLayers/Model_Loss}
+			\caption{Model Loss}
+			\label{fig:exp_IncConvo_ModelLoss}
+		\end{center}
+	\end{minipage}
+\end{figure}
+
+Figure \ref{fig:exp_IncConvo} shows the results when testing the trained model on the test set. The results show a small increase in \textbf{accuracy} from the previous experiment of 76\% to 77\%. Although its a small increase, results do show that \textbf{specificity} has increased from 0.37 to 0.41, hence an improvement in the number of true negatives and reduction in false positives. \textbf{Recall} remains high, but this is due to the class imbalance which favours the positive class. The model accuracy and loss for this experiment shows that the training and validation lines are stable during the training process and does not show signs of over-fitting. 
+
+
+
+
+
