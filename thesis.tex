@@ -6,6 +6,11 @@
 %\usepackage[usenames,dvipsnames]{color}
 \usepackage[pagebackref=false,pdffitwindow=true]{hyperref}
 \usepackage{apacite}
+
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{smartdiagram}
+
 %NOTE: The hyperref usepackage should be the last \usepackage!!
 %NOTE: When pagebackref=true an error will appear at the end of compiling. press `q' to ignore
 %NOTE: Referencing Algorithms does not work if this usepackage is before the hyperref include.!!
@@ -16,8 +21,8 @@
 
 
 \hypersetup{
-    pdftitle    = {Report Title},
-    pdfauthor   = {Author Name},
+    pdftitle    = {Honours Project},
+    pdfauthor   = {Jehanzeb Mobarik},
     pdfsubject  = {Subject Area},
     pdfkeywords = {Comma separated list of keywords},
     colorlinks  = true, anchorcolor = blue, filecolor = blue, urlcolor = blue,
@@ -59,7 +64,7 @@
     showstringspaces=false,
     numbers=left, %
     numberstyle=\footnotesize,
-    breaklines=true,
+    breaklines=true,===
     prebreak={\space\MyHookSign},
     language=Java,
     backgroundcolor=\color{colBackGrnd},
@@ -82,26 +87,44 @@
 \rpttype{BSc}    % Replace MSc with BSc for Honours Degree Year projects.
 \principaladviser{Dr. Eyad Elyan}
 
-\include{intro/abstract}
-
 
 %NOTE: Include the relative reference for each chapter to be included
 % dividing the thesis file structure into a number of directories aids development
 % format: directoryName/filename (the .tex extension is not required for the filename)
 
-\include{ActualThesis/Overview}
-\include{ActualThesis/TraditionalMethods}
-\include{ActualThesis/State_of_the_art}
-\include{ActualThesis/Related_Work}
-\include{ActualThesis/ReviewOfRelatedWork}
-\include{ActualThesis/Medical_Images}
-\input{ActualThesis/Summary}
+\include{intro/abstract}
+\tableofcontents
+\newpage
+
+\include{LiteratureReview/Overview}
+\input{LiteratureReview/TraditionalMethods}
+\input{LiteratureReview/State_of_the_art}
+\include{LiteratureReview/Related_Work}
+\include{LiteratureReview/ReviewOfRelatedWork}
+\input{LiteratureReview/Medical_Images}
+\input{LiteratureReview/Summary}
+\include{RequirementsAnalysis/RequirementsAnalysis}
+
+
+\input{ExperimentSetup/TechnicalSetup}
+\input{ExperimentSetup/DatasetExploration}
+\input{ExperimentSetup/Preprocessing}
+\input{ExperimentSetup/EvaluationMetrics}
+
+\renewcommand{\clearpage}{}
+\input{ExperimentResults/Experiment1}
+\input{ExperimentResults/Hyper_Param_Tuning}
+
+
 
 
 \footnotesize  %NOTE: reduced the size of the text for the bibliography
 %NOTE: set the style for the bibliography and display the references used within the document
+
 \bibliographystyle{apacite}
-\bibliography{ActualThesis/References}
+\bibliography{BibTex/References}
+
+
 \normalsize
 
 \end{document} %NOTE: END of document, nothing after this point
