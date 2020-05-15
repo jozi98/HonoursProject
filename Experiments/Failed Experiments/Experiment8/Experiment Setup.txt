@@ -1,0 +1,5 @@
+The Experiment Setup:
+
+Optimiser : SGD(0.01)
+Batch Size : 32
+Epochs : 50

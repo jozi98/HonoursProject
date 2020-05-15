@@ -1,0 +1,5 @@
+The Experiment Setup:
+
+Optimiser : Adam(0.01)
+Batch Size : 64
+Epochs : 50

@@ -1,0 +1,7 @@
+The Experiment Setup:
+
+Optimiser : SGD(0.01)
+Batch Size : 32
+Epochs : 10
+
+This experiment was used with augmentation to produce more normal images
