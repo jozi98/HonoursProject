@@ -1,0 +1,40 @@
+
+
+\chapter{Experiment Setup}
+
+Before moving onto explaining process of applying the machine learning models for this paper, the following chapters explains the experimental setup that took place before starting the experiments. In this section the hardware and software setup is discussed. As well as this a general overview of the dataset that is used for the experiments is discussed and more importantly the preprocessing that had to occur before running experiments is explained. Lastly evaluation metrics will be discussed so that experiments in the later chapters can be analysed against metrics that determine the success or failure of an experiment
+
+\section{Hardware Implementation}
+
+A computer system with the specifications shown in Table \ref{fig:DGX} will be used to carry out the experiments in this paper. Through the help of Robert Gordon University's Research Hub for Artificial Intelligence, this project makes use of the Research Hub's Nvidia DGX-1 to accelerate the deep learning experiments carried out in this paper. 
+
+\begin{table}[H]
+	\centering
+	\small
+	\caption{Computer System Specification}
+	\label{fig:DGX}
+	\begin{tabular}{ll}
+		
+		\hline
+		Operating System & Ubuntu 18.04 Linux Host OS\\
+		
+		\hline
+		CPU & 2x Intel Xeon E5-2698 v3 (16 core, Haswell-EP) \\
+		\hline
+		System Memory & 512GB DDR4-2133 (LRDIMM)\\
+		\hline
+		GPU & 8x NVIDIA Tesla P100 (3584 CUDA Cores)\\
+		\hline
+		GPU Memory & 128GB HBM2 (8x 16GB) \\
+		\hline
+	\end{tabular}
+\end{table}
+
+
+\section{Software Implementation}
+
+The setup for the experiments in this paper involves the use of \textbf{Python 3}. The solution heavily relies on \textbf{Keras}, which is an open-source neural network library written in python and is capable of running on top of \textbf{TensorFlow} as its back-end. Keras is designed to enable fast experimentation with deep neural networks and contains the basic building blocks to build one such as adding layers, objective functions, activation functions and optimisers. Moreover, Keras through the use of TensorFlow allows for the use of distributed training of deep learning models on multiple Graphics Processing Units - GPUs. This is further achieved by using CUDA, which is a parallel computing platform and Application Programming Interface(API) created by Nvidia. 
+The CUDA platform is a software layer that gives direct access to the GPU allowing for highly parallel manipulation of large blocks of data.
+
+
+

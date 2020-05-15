@@ -1,0 +1,53 @@
+
+\section{Going Beyond Accuracy}\label{metrics}
+
+
+As shown in figure \ref{fig:TestingDist}, the class distribution of the testing set is imbalanced. Due to this imbalance, it is important to look beyond accuracy to validate a model performance. For example, since the test set is imbalanced, if all the test cases were labelled positive, i.e. a class label of pneumonia, then the accuracy on the test set would be 63\%. However, the accuracy does not show the underlying performance of the model, which indicates that it is classifying every patient as having the infection.
+
+
+Due to the domain of this paper and its aim: Automatic classification of X-ray Images as either normal or abnormal, a confusion matrix needs to be considered when evaluating results. Figure \ref{fig:ConfMatrix} shows an example of a confusion matrix that will be used to analyse results. The number of pathological samples that are \textit{correctly} identified as a pathological sample by the model is called a true positive (TP). The number of pathological samples that are \textit{incorrectly} classified as normal by the model is called a false negative(FN). The number of normal samples that are \textit{correctly} identified as normal is called a true negative(TN) and in a similar fashion, the number of normal samples that are \textit{incorrectly} identified as pathological samples is called false positive(FP). 
+Given the domain of this study, the cost of a false negative is higher than a false positive
+
+	
+ \begin{figure}[H]
+	\centering
+	\hspace{-2cm}
+	\includegraphics[scale=0.6]{images/ConfusionMatrix}
+	\caption{Confusion Matrix}
+	\label{fig:ConfMatrix}
+\end{figure}
+
+
+
+Although accuracy is still considered, this study will also examine the values of precision, recall/sensitivity and specificity. Accuracy, specificity, recall and precision are computed as follows:
+
+\begin{center}
+
+\[Accuracy=\frac{TN+TP}{TN+FP+FN+TP}\]
+\vspace{.5em}
+\[Specificity=\frac{TN}{TN+FP}\]
+\vspace{.5em}
+\[Recall/Sensitivity=\frac{TP}{TP+FN}\]
+\vspace{.5em}
+\[Precision=\frac{TP}{TP+FP}\]
+\end{center}
+
+
+
+
+
+
+
+\begin{itemize}
+	
+	\item \textbf{Accuracy} is a basic measure shown as a percentage of the total correct classification out of all the samples in the testing set.
+	\item \textbf{Specificity} shows the degree to which the model correctly identifies normal samples as normal. 
+	\item \textbf{Recall/Sensitivity} is a measure which shows the degree to which the model does not miss a pathological sample
+	\item \textbf{Precision} is measure of the exactness or quality of the model when it returns results for a specific class
+	
+	
+\end{itemize}
+
+
+
+

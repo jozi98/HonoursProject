@@ -1,0 +1,29 @@
+\subsection{Dataset Preprocessing}
+% Oh hello there, here are some tasks: 
+% 1. Remove 'due to the fact' on line 5 - its a filler-word
+% 2. Change due to guidance on line 5
+
+During exploration of the dataset it was shown that the X-ray images provided were of different sizes. This most likely due to different X-ray imaging machines used during collection of the dataset. Before applying the learning algorithm on the X-ray images we needed to make sure that each input image was of the same dimension. This is due to the way a CNN is configured via libraries like Keras, where the size of the input layer is constant. At first, all images were resized from their original size to 250 x 250. However, due to guidance, later experiments used a size of 256 x 256. 
+
+
+
+\subsection{Normalising Images}
+
+Data normalisation is an important step which ensures each pixel value for an image has a similar data distribution. This makes convergence faster while training a neural network. Although non-normalised data can be presented to the neural network, this can result in challenges during training, such as slower training of the model. 
+
+As discussed in section \ref{sect:SotA}  ``State of the Art" , neural networks process inputs using small weight values which are multiplied by the input value. If these inputs are on a large unsigned integer scale, like pixel values, this may disrupt or slow down convergence of the training process. A pixel value of 0(white) compared to 255(black) are both equally as important but the 255 value will have a greater effect on the final prediction. This large value could cause the output to be wrong and lead to the training process taking longer. 
+
+For the purposes of this paper, data normalisation is applied by dividing each pixel value by 255 and as a result all inputs to the model have a range between 0 and 1.
+
+To better understand the stages of normalisation, figure \ref{fig:preprocessing} shows the steps taken to normalise each image.
+\footnote[1]{\href{https://github.com/jozi98/HonoursProject/blob/master/ChestX-ray.ipynb}{Python Notebook:Preprocessing }} 
+
+ \begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.2]{images/Preprocessing.png}
+	\caption{Stages of the Preprocessing and Normalisation}
+	\label{fig:preprocessing}
+\end{figure}
+
+
+ 

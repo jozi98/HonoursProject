@@ -1,0 +1,43 @@
+\section{Dataset}
+
+
+The dataset that will be used for training and testing of the learning algorithm has been taken from a public repository \cite{Dataset}. The dataset includes X-ray images of both normal patients and patients with pneumonia infected lungs. Based on the information given by the authors that published the dataset, for use in the paper titled ``Identifying Medical Diagnoses and Treatable Diseases by Image-Based Deep Learning"  \cite{kermany2018identifying}, the data has been obtained from the Chest X-ray images selected from a respective cohort of pediatric patients aged from one to five years old from Guangzhou Women and Children's Medical Center. 
+
+The dataset comes with two folders which include training and validation. Each folder contains subfolders for each type of classification, normal and pneumonia. The training folder contains 5218 images split into 1342 normal images and 3876 pneumonia images. The validation folder contains 624 images split into 234 normal images and 390 pneumonia images.
+Figures \ref{fig:TrainingDist} and \ref{fig:TestingDist} help to visualise the distribution of the training and testing set respectively. The distribution of both training and testing are important to notice as this will be an important consideration when evaluating the model performance. 
+
+  \begin{figure}[H]
+ 	\centering
+ 	\includegraphics[scale=0.7]{images/TrainingSet_dist.png}
+ 	\caption{Class Distribution of Training Set}
+ 	\label{fig:TrainingDist}
+ \end{figure}
+ 
+ \begin{figure}[H]
+ 	\centering
+ 	\includegraphics[scale=0.7]{images/TestingSet_dist.png}
+ 	\caption{Class Distribution of Testing Set }
+ 	\label{fig:TestingDist}
+ \end{figure}
+
+To visualise the images used to train the learning algorithm, figure \ref{fig:normalX-ray} and \ref{fig:pneumoniaX-ray} shows an example of both a normal patient and a patient suffering from pneumonia. It might be noticeable in figure \ref{fig:normalX-ray} that a healthy X-ray would normally be clearer, and the general area of the chest is more visible compared to cases where pneumonia is present, as shown in figure \ref{fig:pneumoniaX-ray}. However, the onset of pneumonia in patients can differ depending on the severity of the infection. As such, there may only be a few pixels that denote the presence of pneumonia which makes the task of detecting the disease a challenge. 
+
+ \begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.1]{images/normal.jpeg}
+	\caption{Normal Chest X-ray}
+	\label{fig:normalX-ray}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.1]{images/pneumonia.jpeg}
+	\caption{Pneumonia Chest X-ray}
+	\label{fig:pneumoniaX-ray}
+\end{figure}
+
+
+
+
+
+
